@@ -1,3 +1,5 @@
+require('date')
+
 def return_10()
   return 10
 end
@@ -32,6 +34,29 @@ def add_string_as_number(number_1, number_2)
   return number_1.to_i + number_2.to_i
 end
 
-def number_to_full_month_name()
-return Date::MONTHNAMES[1]
+def number_to_full_month_name(month_number)
+return Date::MONTHNAMES[month_number]
+end
+
+def number_to_short_month_name(month_number)
+return Date::ABBR_MONTHNAMES[month_number]
+end
+
+# Further
+
+# Given the length of a side of a cube calculate the volume
+def volume_of_a_cube(n)
+    return n**3
+end
+
+# Given the radius of a sphere calculate the volume
+def radius(n)
+    sphere = Math::PI * 4/3 * n**3
+    return sphere.round(2)
+end
+
+# Given a temperature in degrees farenheit, convert this into celsius.
+def fahrenheit_to_celsius(n)
+  fahrenheit = (n -32)*5/9
+  return fahrenheit.round(2)
 end
